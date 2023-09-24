@@ -1,7 +1,5 @@
 package Seminar5HW;
 
-import java.net.Socket;
-
 public class main {
     public static void main(String[] args) {
         PhoneBook phoneBook = new PhoneBook();
