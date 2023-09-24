@@ -8,11 +8,15 @@ public class main {
         phoneBook.add("Иван", "78966");
         phoneBook.add("Иван", "54378");
         phoneBook.add("Иван", "45877");
-        phoneBook.add("Игорь", "78966");
+        phoneBook.add("Игорь", "78967");
         phoneBook.add("Алексей", "45688");
-        phoneBook.add("Андрей", "78966");
-        System.out.println(phoneBook.getAll());
+        phoneBook.add("Андрей", "78969");
+        System.out.println("Телефонная книга: ");
+        phoneBook.getAll();
+
+        System.out.println("\nПоиск по имени");
         System.out.println(phoneBook.getByName("Иван"));
+        System.out.println("\nПоиск по телефоны");
         System.out.println(phoneBook.getByNum("78966"));
     }
 }

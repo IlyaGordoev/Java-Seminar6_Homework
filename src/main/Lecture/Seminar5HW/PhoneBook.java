@@ -1,9 +1,12 @@
 package Seminar5HW;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import com.sun.jdi.Value;
+
+import java.awt.*;
+import java.util.*;
 import java.util.List;
-import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class PhoneBook {
     /*
@@ -42,9 +45,20 @@ public class PhoneBook {
         }
         return stringBuilder.toString();
     }
-    String getAll() {
-        return map.toString();
-    }
 
-}
+    void getAll() {
+    List<ArrayList<String>> arr = new ArrayList<>(map.values());
+    arr.sort(Comparator.comparingInt(List::size));
+    Collections.reverse(arr);
+//    System.out.println(arr);
+//    System.out.println(map);
+        for (ArrayList array: arr) {
+            for (Map.Entry<String, ArrayList<String>> entry : map.entrySet()) {
+                if (entry.getValue().equals(array)) {
+                    System.out.println(entry.getKey() + " " + entry.getValue());
+                    }
+                }
+            }
+        }
+    }
 
